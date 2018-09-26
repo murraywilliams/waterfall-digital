@@ -6,21 +6,27 @@ import Nav from '../components/nav'
 const Home = () => (
   <div>
     <Head title="Home" />
-    <Nav />
     <div className="hero">
+      <Nav />
       <h1 className="title">Breathing new life<br/> into your ideas!</h1>
       <p className="description">
         We've seen it all - from scaling MVP's to well-rounded web applications. Ambitious and driven by huge amounts of commercial experience, gained by working for successful startups and world-class companies.
       </p>
       <div className="hero-cta">
-        Get in touch <code>or</code> see why we are a good fit
+        <Link>
+          <button>Get in touch</button>
+        </Link>
+        <code>or</code>
+        <Link>
+          <a>see why we're worth it</a>
+        </Link>
       </div>
     </div>
     <div className="wrapper">
       <div className="ups">
           <Link href="#">
             <a className="card">
-              <h3>A few reasons why we might be the right fit:</h3>
+              <h2>A few reasons why we might be the right fit:</h2>
             </a>
           </Link>
           <Link href="#">
@@ -61,7 +67,7 @@ const Home = () => (
 
       <div className="about">
         <div className="left">
-        {/* About image to go here */}
+        <img src="/static/about-image.jpg" />
         </div>
         <div className="right">
           <h3>But wait... who are Waterfall Digital?</h3>
@@ -125,21 +131,40 @@ const Home = () => (
       }
       .hero {
         color: #333;
-        height: 85vh;
-        background: #E3E3E3;
-        padding: 80px 20px 0;
+        height: 100vh;
+        background: url(/static/hero-banner-image.jpg);
+        background-size: cover;
+        background-position: bottom;
+        padding: 40px 20px 0;
         text-align: center;
       }
       .title {
         margin: 0;
+        color: white;
         width: 100%;
-        padding-top: 40px;
+        padding-top: 4z0px;
         line-height: 1.15;
-        font-size: 38px;
+        font-size: 40px;
       }
-      .title,
       .description {
-        
+        color: white;
+        line-height: 28px;
+      }
+
+      .hero-cta button {
+        padding: 20px;
+        border-radius: 25px;
+        background: white;
+        border: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 0 10px;
+      }
+      .hero-cta a {
+        font-size: 14px;
+        text-decoration: underline;
+        color: white;
+        margin: 0 10px;
       }
       .ups {
         max-width: 880px;
@@ -156,16 +181,23 @@ const Home = () => (
         text-decoration: none;
         color: #434343;
       }
-      .card h3 {
+      .card h2 {
         margin: 0;
-        color: darkgrey;
+        color: #292929;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 32px;
+      }
+      .card h3 {
         font-size: 18px;
+        font-weight: 600;
       }
       .card p {
         margin: 0;
         padding: 12px 0 0;
         font-size: 13px;
         color: #333;
+        line-height: 22px;
       }
 
       .about {
