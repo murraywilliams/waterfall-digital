@@ -31,6 +31,7 @@ const Home = () => (
           </Link>
           <Link href="#">
             <a className="card">
+              <img src="/static/hot-air-balloon.png" />
               <h3>Latest technology</h3>
               <p>
                 Following the hottest trends, we've got the best frameworks on board.
@@ -39,6 +40,7 @@ const Home = () => (
           </Link>
           <Link href="#">
             <a className="card">
+              <img src="/static/hot-air-balloon.png" />
               <h3>Infinite passion</h3>
               <p>We love our jobs, therefore we treat every project like it was our own.</p>
             </a>
@@ -47,18 +49,21 @@ const Home = () => (
       <div className="ups">
           <Link href="#">
             <a className="card">
+              <img src="/static/hot-air-balloon.png" />
               <h3>Rich experience</h3>
               <p>As the startup veterans, we've seen it all and helped tons of companies grow.</p>
             </a>
           </Link>
           <Link href="#">
             <a className="card">
+              <img src="/static/hot-air-balloon.png" />
               <h3>Mutual partnership</h3>
               <p>Always happy to share any kind of business or real life advice.</p>
             </a>
           </Link>
           <Link href="#">
             <a className="card">
+              <img src="/static/hot-air-balloon.png" />
               <h3>Attention to schedule</h3>
               <p>Deadline is our religion. Let's ship your MVP before that damn competition!</p>
             </a>
@@ -67,7 +72,7 @@ const Home = () => (
 
       <div className="about">
         <div className="left">
-        <img src="/static/about-image.jpg" />
+        <img src="/static/w-image.png" />
         </div>
         <div className="right">
           <h3>But wait... who are Waterfall Digital?</h3>
@@ -126,8 +131,9 @@ const Home = () => (
 
     <style jsx>{`
       .wrapper {
-        padding: 0 20px;
-      text-align: center;
+        text-align: center;
+        max-width: 100%;
+        font-family: 'Kodchasan', sans-serif;
       }
       .hero {
         color: #333;
@@ -135,42 +141,50 @@ const Home = () => (
         background: url(/static/hero-banner-image.jpg);
         background-size: cover;
         background-position: bottom;
-        padding: 40px 20px 0;
+        padding: 10px 5px 0;
         text-align: center;
       }
+      .hero img {
+        width: 80px;
+      }
       .title {
-        margin: 0;
+        margin: 20px 0 0;
         color: white;
         width: 100%;
         padding-top: 4z0px;
         line-height: 1.15;
-        font-size: 40px;
+        font-size: 35px;
+        font-weight: 800;
       }
       .description {
         color: white;
         line-height: 28px;
+        font-weight: 300;
       }
 
       .hero-cta button {
         padding: 20px;
         border-radius: 25px;
-        background: white;
+        background: #10DEB2;
         border: none;
         text-transform: uppercase;
         font-weight: 600;
         margin: 0 10px;
+        color: #2A2727;
       }
       .hero-cta a {
         font-size: 14px;
         text-decoration: underline;
         color: white;
         margin: 0 10px;
+        font-weight: 800;
       }
       .ups {
         max-width: 880px;
-        margin: 0 auto;
+        margin: 40px auto 0;
         display: flex;
         flex-direction: column;
+        font-family: 'Open Sans', sans-serif;
         justify-content: space-around;
         align-items: center;
       }
@@ -196,31 +210,78 @@ const Home = () => (
         margin: 0;
         padding: 12px 0 0;
         font-size: 13px;
+        font-weight: 300;
         color: #333;
         line-height: 22px;
       }
-
       .about {
-
+        margin-top: 40px;
+        font-family: 'Open Sans', sans-serif;
+      }
+      .about .left img {
+        width: 100%;
+      }
+      .about .right {
+        padding: 0 20px;
+      }
+      .about p {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 300;
       }
 
       .testimonials {
-
+        padding: 0 20px;
+        margin-top: 60px;
+      }
+      .testimonials p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 24px;
       }
 
       .portfolio {
-
+        padding: 0 20px;
+        margin-top: 60px;
+      }
+      .portfolio p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: 24px;
       }
 
       .coffee-cta {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 800;
+        padding: 0 20px;
+        margin-top: 60px;
+      }
 
-        margin-top: 40px;
+      .coffee-cta a {
+        padding: 20px;
+        border-radius: 31px;
+        border: 2px solid #10DEB2;
+        background: #10DEB2;
+        text-transform: uppercase;
+        font-weight: 600;
+        display: inline-block;
+        color: #2A2727;
+        text-decoration: none;
+      }
+      .coffee-cta a:hover {
+        background: white;
+        border: 2px solid #10DEB2;
+        color: #10DEB2;
       }
 
       .footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        font-size: 12px;
+        line-height: 24px;
         margin-top: 40px;
       }
 

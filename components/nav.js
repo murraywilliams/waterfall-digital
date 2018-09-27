@@ -15,7 +15,7 @@ const links = [
 const Nav = () => (
   <div className="util__flex">
     <Link href="/">
-      <a>WaterFall Digital</a>
+      <a><img style={{width: '80px'}} src="/static/logo-final.png" /></a>
     </Link>
     <nav>
       <ul>
@@ -31,8 +31,7 @@ const Nav = () => (
       <style jsx>{`
         :global(body) {
           margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-            Helvetica, sans-serif;
+          font-family: 'Open Sans', sans-serif;
         }
         .util__flex {
           text-align: center;
@@ -47,15 +46,20 @@ const Nav = () => (
         }
         nav > ul {
           padding: 4px 16px;
+          margin: 0;
         }
         li {
           display: flex;
           padding: 6px 8px;
         }
         a {
-          color: #067df7;
+          color: #2A2727;
           text-decoration: none;
-          font-size: 13px;
+          font-size: 12px;
+        }
+        a:hover {
+          color: #10DEB2;
+          text-decoration: underline;
         }
       `}</style>
     </nav>
