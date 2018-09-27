@@ -8,18 +8,20 @@ const Home = () => (
     <Head title="Home" />
     <div className="hero">
       <Nav />
-      <h1 className="title">Breathing new life<br/> into your ideas!</h1>
-      <p className="description">
-        We've seen it all - from scaling MVP's to well-rounded web applications. Ambitious and driven by huge amounts of commercial experience, gained by working for successful startups and world-class companies.
-      </p>
-      <div className="hero-cta">
-        <Link>
-          <button>Get in touch</button>
-        </Link>
-        <code>or</code>
-        <Link>
-          <a>see why we're worth it</a>
-        </Link>
+      <div className="banner-content">
+        <h1 className="title">Breathing new life<br/> into your ideas!</h1>
+        <p className="description">
+          We've seen it all - from scaling MVP's to well-rounded web applications. Ambitious and driven by huge amounts of commercial experience, gained by working for successful startups and world-class companies.
+        </p>
+        <div className="hero-cta">
+          <Link href="#">
+            <button>Get in touch</button>
+          </Link>
+          <code>or</code>
+          <Link href="#">
+            <a>see why we're worth it</a>
+          </Link>
+        </div>
       </div>
     </div>
     <div className="wrapper">
@@ -143,9 +145,19 @@ const Home = () => (
         background-position: bottom;
         padding: 10px 5px 0;
         text-align: center;
+        margin-bottom: 40px;
       }
       .hero img {
         width: 80px;
+      }
+
+      @media screen and (min-width: 768px) {
+        .banner-content {
+          text-align: left;
+          max-width: 400px;
+          margin-left: 40px;
+          margin-top: 40px;
+        }
       }
       .title {
         margin: 20px 0 0;
@@ -161,13 +173,18 @@ const Home = () => (
         line-height: 28px;
         font-weight: 300;
       }
-
+      @media screen and (max-width: 768px) {
+        .hero-cta {
+          margin-top: 40px;
+        }
+      }
       .hero-cta button {
         padding: 20px;
-        border-radius: 25px;
+        border-radius: 31px;
         background: #10DEB2;
         border: none;
         text-transform: uppercase;
+        font-size: 12px;
         font-weight: 600;
         margin: 0 10px;
         color: #2A2727;
@@ -181,12 +198,18 @@ const Home = () => (
       }
       .ups {
         max-width: 880px;
-        margin: 40px auto 0;
         display: flex;
         flex-direction: column;
         font-family: 'Open Sans', sans-serif;
         justify-content: space-around;
         align-items: center;
+      }
+      @media screen and (min-width: 768px) {
+        .ups {
+          flex-direction: row;
+          align-items: flex-start;
+          margin: 0 40px;
+        }
       }
       .card {
         padding: 18px 18px 24px;
@@ -195,16 +218,29 @@ const Home = () => (
         text-decoration: none;
         color: #434343;
       }
+      @media screen and (min-width: 768px) {
+        .card {
+          text-align: left;
+        }
+      }
+      .card img {
+        width: 20px;
+      }
       .card h2 {
         margin: 0;
         color: #292929;
-        font-size: 24px;
+        font-size: 26px;
         font-weight: 300;
-        line-height: 32px;
+        line-height: 38px;
       }
       .card h3 {
         font-size: 18px;
         font-weight: 600;
+      }
+      @media screen and (min-width: 768px) {
+        .card h3 {
+          font-size: 14px;
+        }
       }
       .card p {
         margin: 0;
@@ -218,16 +254,34 @@ const Home = () => (
         margin-top: 40px;
         font-family: 'Open Sans', sans-serif;
       }
+      @media screen and (min-width: 768px) {
+        .about {
+          display: flex;
+          align-items: center;
+          flex-wrap: nowrap;
+        }
+      }
       .about .left img {
         width: 100%;
       }
+      @media screen and (min-width: 768px) {
+        .about .left img {
+          flex: 1;
+        }
+      }
       .about .right {
         padding: 0 20px;
+        text-align: left;
       }
       .about p {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 24px;
         font-weight: 300;
+      }
+      @media screen and (min-width: 768px) {
+        .about .left, .about .right {
+          flex: 1;
+        }
       }
 
       .testimonials {

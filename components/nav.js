@@ -37,6 +37,15 @@ const Nav = () => (
           text-align: center;
           padding-top: 40px;
         }
+        @media screen and (min-width: 768px) {
+          .util__flex {
+            flex-direction: row;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 40px;
+          }
+        }
         nav {
           text-align: center;
         }
