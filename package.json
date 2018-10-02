@@ -6,7 +6,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "micro-form": "^2.0.5",
     "next": "^7.0.0",
+    "nuka-carousel": "^4.4.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   }

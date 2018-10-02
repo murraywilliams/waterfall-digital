@@ -13,9 +13,9 @@ const links = [
 })
 
 const Nav = () => (
-  <div className="util__flex">
+  <div className="header__flex">
     <Link href="/">
-      <a><img style={{width: '80px'}} src="/static/logo-final.png" /></a>
+      <a><img style={{ width: '80px' }} src="/static/logo-final.png" /></a>
     </Link>
     <nav>
       <ul>
@@ -33,17 +33,16 @@ const Nav = () => (
           margin: 0;
           font-family: 'Open Sans', sans-serif;
         }
-        .util__flex {
+        .header__flex {
           text-align: center;
           padding-top: 40px;
         }
         @media screen and (min-width: 768px) {
-          .util__flex {
-            flex-direction: row;
+          .hero .header__flex {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: nowrap;
+            justify-content: space-around;
             align-items: center;
-            margin: 0 40px;
           }
         }
         nav {
@@ -62,7 +61,7 @@ const Nav = () => (
           padding: 6px 8px;
         }
         a {
-          color: #2A2727;
+          color: white;
           text-decoration: none;
           font-size: 12px;
         }
